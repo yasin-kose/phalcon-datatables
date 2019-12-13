@@ -54,7 +54,7 @@ class QueryBuilder extends AdapterInterface
             $this->global_search[] = "LOWER({$column}) ILIKE :{$key}:";
             $search = str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$search);
             $this->_bind[$key] = "%{$search}%";
-        });
+        }); 
         $this->bind('column_search', false, function ($column, $search) {
             $key = "keyc_" . str_replace(" ", "", preg_replace("/[^[:alnum:][:space:]]/u", "", $column));
             $this->column_search[] = "LOWER({$column}) ILIKE :{$key}:";
