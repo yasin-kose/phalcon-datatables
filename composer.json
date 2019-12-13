@@ -10,6 +10,11 @@
             "email": "yasin.kose@outlook.com.tr"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "DataTables\\": "src/"
+        }
+    },
     "require": {
         "php": ">=7.0",
         "ext-phalcon": ">=3.0.0"
