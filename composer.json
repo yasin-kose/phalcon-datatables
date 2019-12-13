@@ -1,6 +1,6 @@
 {
     "name": "ankapix/phalcon-datatables",
-    "description": "A DataTables adapter for Phalcon Framework",
+    "description": "A DataTables adapter for Phalcon Framework.",
     "type": "composer-plugin",
     "require": {
         "php": ">=7.0",
