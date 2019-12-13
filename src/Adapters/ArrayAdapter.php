@@ -30,7 +30,6 @@ class ArrayAdapter extends AdapterInterface {
                             $col = $this->columnExists($column, true);
                             if (!is_null($col)) {
                                 $check = (strripos (str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$item[$column]), str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$search)) !== false);
-                                $check = (stripos($item[$col], $search) !== false);
                             } else {
                                 $check = false;
                             }
@@ -47,7 +46,6 @@ class ArrayAdapter extends AdapterInterface {
                             $col = $this->columnExists($column, true);
                             if (!is_null($col)) {
                                 $check = (strripos (str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$item[$column]), str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$search)) !== false);
-                                $check = (stripos($item[$col], $search) !== false);
                             } else {
                                 $check = false;
                             }
