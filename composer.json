@@ -1,0 +1,17 @@
+{
+    "name": "ankapix/phalcon-datatables",
+    "description": "Phalcon adapter for Phalcon",
+    "keywords": ["Phalcon", "DataTables", "Plugin"],
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yasin Köse",
+            "email": "yasin.kose@outlook.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-phalcon": ">=3.0.0"
+    }
+}
