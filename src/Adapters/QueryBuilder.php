@@ -51,12 +51,14 @@ class QueryBuilder extends AdapterInterface
         $this->column_search = [];
         $this->bind('global_search', false, function ($column, $search) {
             $key = "keyg_" . preg_replace("/[^[:alnum:][:space:]]/u", "", $column);
-            $this->global_search[] = "{$column} LIKE :{$key}:";
+            $this->global_search[] = "LOWER({$column}) ILIKE :{$key}:";
+            $search = str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$search);
             $this->_bind[$key] = "%{$search}%";
         });
         $this->bind('column_search', false, function ($column, $search) {
             $key = "keyc_" . str_replace(" ", "", preg_replace("/[^[:alnum:][:space:]]/u", "", $column));
-            $this->column_search[] = "{$column} LIKE :{$key}:";
+            $this->column_search[] = "LOWER({$column}) ILIKE :{$key}:";
+            $search = str_replace(['Ç','ç','Ğ','ğ','ı','İ','Ö','ö','Ş','ş','Ü','ü'],['c','c','g','g','i','i','o','o','s','s','u','u'],$search);
             $this->_bind[$key] = "%{$search}%";
         });
         $this->bind('order', false, function ($order) {
