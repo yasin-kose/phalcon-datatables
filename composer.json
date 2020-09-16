@@ -9,7 +9,9 @@
     "authors": [
         {
             "name": "Yasin Köse",
-            "email": "yasin.kose@outlook.com.tr"
+            "email": "bilgi@yasinkose.com.tr",
+            "homepage": "http://www.ankapix.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
